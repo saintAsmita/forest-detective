@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c9bbdc"/><stop offset="1" stop-color="#f4e8d7"/></linearGradient><linearGradient id="grass" x2="0" y2="1"><stop stop-color="#aab791"/><stop offset="1" stop-color="#647f6f"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h900v750H0z"/><circle cx="735" cy="129" r="62" fill="#fff2cd"/>
+<g fill="#fff9ee" opacity=".75"><path d="M357 124c-33-47-86-15-78 17-48-11-62 54-8 57h186c50-7 27-68-10-56-4-54-78-61-90-18Z"/><path d="M633 250c-26-30-57-7-50 15-43-4-46 42-5 44h157c28-13 8-49-20-40-3-41-62-57-82-19Z"/></g>
+<path d="M0 455Q240 270 474 451T900 399V750H0Z" fill="#d0d1ac"/><path d="M0 555Q285 401 496 513T900 478V750H0Z" fill="url(#grass)"/>
+<path d="M422 765C384 632 820 650 688 527S528 482 567 433" fill="none" stroke="#e1c9a2" stroke-width="64"/>
+<g transform="translate(432 302)"><path d="M20 106h225v180H20z" fill="#f6e7c8" stroke="#756181" stroke-width="7"/><path d="m0 113 130-106 138 106Z" fill="#826494" stroke="#665276" stroke-width="8"/><rect x="113" y="172" width="62" height="114" rx="30" fill="#9274a6"/><rect x="42" y="151" width="45" height="53" rx="8" fill="#c5dce4" stroke="#ac956e" stroke-width="6"/><rect x="193" y="151" width="32" height="53" rx="7" fill="#c5dce4"/><circle cx="131" cy="102" r="25" fill="#fff6dc"/><path d="M116 90h30v22h-30zm0 0 15 12 15-12" fill="none" stroke="#a482a8" stroke-width="3"/><circle cx="160" cy="242" r="4" fill="#f5d092"/></g>
+<g transform="translate(740 505)"><path d="M30 65v85" stroke="#755e51" stroke-width="14"/><path d="M0 67V28C0-8 71-8 71 28v39Z" fill="#a081b1" stroke="#665174" stroke-width="5"/><path d="M12 34h38" stroke="#675378" stroke-width="5"/><path d="M66 28V-5h30v18H66" fill="#e9b66f" stroke="#997146" stroke-width="4"/></g>
+<g fill="#536f62"><path d="m112 610 80-230 85 230Z"/><path d="m751 452 70-185 76 185Z"/><path d="m251 524 48-145 60 145Z"/></g><g fill="#728970"><path d="m89 560 80-226 85 226Z"/><path d="m316 447 49-148 53 148Z"/></g>
+<g transform="translate(471 583) rotate(-13)"><rect width="111" height="76" rx="12" fill="#fff6df" stroke="#ab83a9" stroke-width="4"/><path d="m2 3 54 42 52-42" fill="none" stroke="#ab83a9" stroke-width="4"/><circle cx="56" cy="44" r="11" fill="#d397ad"/></g>
+<g fill="#f4dcaf"><circle cx="329" cy="645" r="6"/><circle cx="347" cy="673" r="5"/><circle cx="704" cy="703" r="6"/><circle cx="728" cy="673" r="5"/></g>
+</svg>
