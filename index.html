@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#163f37"><meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="森林侦探：为孩子设计的离线思维探险。四章原创探险：观察、推理、找规律、规划路线。">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="森林侦探：为孩子设计的离线思维探险。五章原创探险：观察、推理、找规律、规划路线。">
   <title>森林侦探 · 思维探险</title>
   <link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./assets/icon-192.png">
-  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./characters.css"><link rel="stylesheet" href="./train.css"><link rel="stylesheet" href="./mail.css"><link rel="stylesheet" href="./picnic.css">
-  <script src="./precache.js" defer></script><script src="./chapter2.js" defer></script><script src="./chapter3.js" defer></script><script src="./mail-play.js" defer></script><script src="./chapter4.js" defer></script><script src="./picnic-play.js" defer></script><script src="./progress.js" defer></script><script src="./train-play.js" defer></script><script src="./app.js" defer></script>
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./characters.css"><link rel="stylesheet" href="./train.css"><link rel="stylesheet" href="./mail.css"><link rel="stylesheet" href="./picnic.css"><link rel="stylesheet" href="./stage.css">
+  <script src="./precache.js" defer></script><script src="./chapter2.js" defer></script><script src="./chapter3.js" defer></script><script src="./mail-play.js" defer></script><script src="./chapter4.js" defer></script><script src="./picnic-play.js" defer></script><script src="./chapter5.js" defer></script><script src="./stage-play.js" defer></script><script src="./progress.js" defer></script><script src="./train-play.js" defer></script><script src="./app.js" defer></script>
 </head>
 <body>
   <div class="app-shell">
@@ -15,6 +15,6 @@
     <main id="main"></main>
     <footer><span>观察一下 · 想一想 · 试试看</span><span>每一个好问题，都值得慢慢想。</span></footer>
   </div>
-  <dialog id="parent-dialog" aria-labelledby="parent-title"><div class="dialog-top"><h2 id="parent-title">家长手册</h2><button class="icon-button" id="close-parent" aria-label="关闭家长手册">×</button></div><p>四章分别练习观察推理、图形规律、路线规划和数量分配。孩子可以自己读，也可以点“听一听”。没有倒计时，提示不会扣奖励。</p><div class="parent-stats" id="parent-stats"></div><h3>带到 iPad 上</h3><ol><li>通过 HTTPS 地址，用 Safari 打开。</li><li>分享 → 添加到主屏幕，再从主屏幕打开。</li><li>点击“下载四章”，等到显示“四章已下载”。</li><li>打开飞行模式，退出后重开，确认图片、配音和关卡都可使用。</li></ol><p class="note">Windows 上的 localhost 可以测试离线；iPad 访问电脑的普通 HTTP 地址只能在线试玩。正式离线使用需要 HTTPS。清理网站数据会删除进度和课程，请保存备份。</p><div class="dialog-actions"><button class="secondary" id="download">下载四章</button><button class="secondary" id="export">导出进度</button><label class="secondary file-label">恢复进度<input id="import" type="file" accept="application/json,.json"></label></div><p id="download-status" role="status"></p><button class="secondary" id="update" hidden>更新课程（返回首页后）</button><p id="backup-status" role="status"></p></dialog>
+  <dialog id="parent-dialog" aria-labelledby="parent-title"><div class="dialog-top"><h2 id="parent-title">家长手册</h2><button class="icon-button" id="close-parent" aria-label="关闭家长手册">×</button></div><p>五章分别练习观察推理、图形规律、路线规划、数量分配和多条件关系推理。孩子可以自己读，也可以点“听一听”。没有倒计时，提示不会扣奖励。</p><div class="parent-stats" id="parent-stats"></div><h3>带到 iPad 上</h3><ol><li>通过 HTTPS 地址，用 Safari 打开。</li><li>分享 → 添加到主屏幕，再从主屏幕打开。</li><li>点击“下载五章”，等到显示“五章已下载”。</li><li>打开飞行模式，退出后重开，确认图片、配音和关卡都可使用。</li></ol><p class="note">Windows 上的 localhost 可以测试离线；iPad 访问电脑的普通 HTTP 地址只能在线试玩。正式离线使用需要 HTTPS。清理网站数据会删除进度和课程，请保存备份。</p><div class="dialog-actions"><button class="secondary" id="download">下载五章</button><button class="secondary" id="export">导出进度</button><label class="secondary file-label">恢复进度<input id="import" type="file" accept="application/json,.json"></label></div><p id="download-status" role="status"></p><button class="secondary" id="update" hidden>更新课程（返回首页后）</button><p id="backup-status" role="status"></p></dialog>
   <div id="toast" role="status" class="toast" hidden></div>
 </body></html>
