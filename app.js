@@ -1,6 +1,7 @@
 'use strict';
 const $=s=>document.querySelector(s);
-const STORAGE='forest-detective-v20';
+const STORAGE='forest-detective-v30';
+const TWENTIETH_STORAGE='forest-detective-v20';
 const SIXTEENTH_STORAGE='forest-detective-v16';
 const FIFTEENTH_STORAGE='forest-detective-v15';
 const ELEVENTH_STORAGE='forest-detective-v11';
@@ -32,13 +33,13 @@ const firstChapterLessons=[
  {title:'沿着路线去找',short:'空间与顺序',symbol:'↱',type:'map',question:'松松把箱子搬到了哪里？',instruction:'从邮局出发，按卡片移动，再点终点。',story:'松松留了一张路线卡。地图上方就是北方。顺着路线，应该就能找到他！',clues:['起点：邮局','先向右走两格','再向上走一格'],hints:['先从左下角的邮局，向右移动到右下角的小桥。','再从小桥向上走一格，就到了仓库。'],answer:['warehouse'],success:'找到仓库了！先向右两格，再向上一格，走的顺序很重要。'},
  {title:'新朋友的委托',short:'迁移小挑战',symbol:'☆',type:'transfer',question:'谁来帮松松推小车？',instruction:'换了新朋友，试试同样的推理方法。',story:'松松说：“快下雨了，我把胡萝卜搬到仓库啦！还有一位朋友来帮忙。”',clues:['戴着帽子','背着背包','穿着红鞋'],hints:['花花没有背包，团团没有戴帽子。','点点穿蓝鞋。看看灰灰是不是三条都符合。'],answer:['koala'],success:'是灰灰！即使换了人物，也可以逐条检查、排除，找到同时符合条件的答案。'}
 ];
-const CHAPTERS={carrots:{id:'carrots',number:'001',name:'胡萝卜失踪事件',subtitle:'观察线索，找到答案',title:'咦，胡萝卜<br><span>去哪儿了？</span>',description:'邮局门口的胡萝卜不见了。<br>带上你的好奇心，一起找到故事的答案。',image:'./assets/forest.png',imageAlt:'阳光下的森林邮局，门前放着胡萝卜箱子',tag:'今日委托：寻找胡萝卜的去向 🥕',audioRoot:'./assets/audio/',skills:['细心观察','逐条推理','用证据说话'],endingTitle:'好侦探，找到答案啦！',endingText:'胡萝卜没有被偷走。<br>松松和灰灰担心下雨，把它们搬进了仓库。<br>兔子奶奶说：“谢谢你们，也谢谢认真找线索的小侦探！”',endingQuestion:'你能说说，哪一条线索帮了你最大的忙吗？',lessons:firstChapterLessons},train:window.TRAIN_CHAPTER,mail:window.MAIL_CHAPTER,picnic:window.PICNIC_CHAPTER,stage:window.STAGE_CHAPTER,lantern:window.LANTERN_CHAPTER,garden:window.GARDEN_CHAPTER,camp:window.CAMP_CHAPTER,gifts:window.GIFTS_CHAPTER,delivery:window.DELIVERY_CHAPTER,museum:window.MUSEUM_CHAPTER,water:window.WATER_CHAPTER,balance:window.BALANCE_CHAPTER,mosaic:window.MOSAIC_CHAPTER,switches:window.SWITCHES_CHAPTER,expression:window.EXPRESSION_CHAPTER,treasure:window.TREASURE_CHAPTER,help:window.HELP_CHAPTER,sprout:window.SPROUT_CHAPTER,choice:window.CHOICE_CHAPTER};
+const CHAPTERS={carrots:{id:'carrots',number:'001',name:'胡萝卜失踪事件',subtitle:'观察线索，找到答案',title:'咦，胡萝卜<br><span>去哪儿了？</span>',description:'邮局门口的胡萝卜不见了。<br>带上你的好奇心，一起找到故事的答案。',image:'./assets/forest.png',imageAlt:'阳光下的森林邮局，门前放着胡萝卜箱子',tag:'今日委托：寻找胡萝卜的去向 🥕',audioRoot:'./assets/audio/',skills:['细心观察','逐条推理','用证据说话'],endingTitle:'好侦探，找到答案啦！',endingText:'胡萝卜没有被偷走。<br>松松和灰灰担心下雨，把它们搬进了仓库。<br>兔子奶奶说：“谢谢你们，也谢谢认真找线索的小侦探！”',endingQuestion:'你能说说，哪一条线索帮了你最大的忙吗？',lessons:firstChapterLessons},train:window.TRAIN_CHAPTER,mail:window.MAIL_CHAPTER,picnic:window.PICNIC_CHAPTER,stage:window.STAGE_CHAPTER,lantern:window.LANTERN_CHAPTER,garden:window.GARDEN_CHAPTER,camp:window.CAMP_CHAPTER,gifts:window.GIFTS_CHAPTER,delivery:window.DELIVERY_CHAPTER,museum:window.MUSEUM_CHAPTER,water:window.WATER_CHAPTER,balance:window.BALANCE_CHAPTER,mosaic:window.MOSAIC_CHAPTER,switches:window.SWITCHES_CHAPTER,expression:window.EXPRESSION_CHAPTER,treasure:window.TREASURE_CHAPTER,help:window.HELP_CHAPTER,sprout:window.SPROUT_CHAPTER,choice:window.CHOICE_CHAPTER,invite:window.INVITE_CHAPTER,lostcup:window.LOSTCUP_CHAPTER,sandwich:window.SANDWICH_CHAPTER,windmill:window.WINDMILL_CHAPTER,message:window.MESSAGE_CHAPTER,footprints:window.FOOTPRINTS_CHAPTER,blocks:window.BLOCKS_CHAPTER,rules:window.RULES_CHAPTER,interview:window.INTERVIEW_CHAPTER,storyshow:window.STORYSHOW_CHAPTER};
 const isExpression=id=>id==='expression'||CHAPTERS[id]?.track==='expression';
 const fresh=ForestProgress.fresh;
 const validState=v=>Boolean(ForestProgress.normalize(v));
 let state=fresh(),storageOk=true;
 function readSaved(key){try{return ForestProgress.normalize(JSON.parse(localStorage.getItem(key)));}catch{return null;}}
-state=readSaved(STORAGE)||readSaved(SIXTEENTH_STORAGE)||readSaved(FIFTEENTH_STORAGE)||readSaved(ELEVENTH_STORAGE)||readSaved(EIGHTH_STORAGE)||readSaved(SEVENTH_STORAGE)||readSaved(SIXTH_STORAGE)||readSaved(FIFTH_STORAGE)||readSaved(FOURTH_STORAGE)||readSaved(THIRD_STORAGE)||readSaved(PREVIOUS_STORAGE)||readSaved(LEGACY_STORAGE)||fresh();
+state=readSaved(STORAGE)||readSaved(TWENTIETH_STORAGE)||readSaved(SIXTEENTH_STORAGE)||readSaved(FIFTEENTH_STORAGE)||readSaved(ELEVENTH_STORAGE)||readSaved(EIGHTH_STORAGE)||readSaved(SEVENTH_STORAGE)||readSaved(SIXTH_STORAGE)||readSaved(FIFTH_STORAGE)||readSaved(FOURTH_STORAGE)||readSaved(THIRD_STORAGE)||readSaved(PREVIOUS_STORAGE)||readSaved(LEGACY_STORAGE)||fresh();
 let chapterId=state.activeChapter,lessons=CHAPTERS[chapterId].lessons;
 const currentChapter=()=>CHAPTERS[chapterId];
 const progress=()=>state.chapters[chapterId];
